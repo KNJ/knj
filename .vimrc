@@ -38,10 +38,19 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 " Initialize
+set title
 set number
+set ruler
+set expandtab
+set laststatus=2
 set ts=4
+set autoindent
+set smartindent
+set smarttab
+set whichwrap=b,s,h,l,<,>,[,]
 colorscheme molokai
 syntax on
+highlight LineNr ctermfg=43
 
 " Auto reload .vimrc
 augroup source_vimrc
