@@ -5,11 +5,11 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=/Users/knj/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/knj/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -22,6 +22,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'cohama/lexima.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -44,10 +47,16 @@ set ruler
 set expandtab
 set laststatus=2
 set ts=4
+set shiftwidth=4
 set autoindent
 set smartindent
 set smarttab
+set smartcase
+set wildmenu
+set showcmd
+set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 colorscheme molokai
 syntax on
 highlight LineNr ctermfg=43
@@ -64,3 +73,7 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_enable_on_vim_startup = 1
+
+" fugitive
+autocmd QuickFixCmdPost *grep* cwindow
+set statusline+=%{fugitive#statusline()}
