@@ -3,6 +3,7 @@
 !.gitignore
 !.vimrc
 !.vim
+!README.md
 
 .vim/bundle
 .DS_Store
