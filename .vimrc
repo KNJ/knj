@@ -21,10 +21,10 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/lexima.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'sudo.vim'
 
 " You can specify revision/branch/tag.
