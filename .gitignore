@@ -6,4 +6,7 @@
 !README.md
 
 .vim/bundle
+.vim/history/*
+!.vim/history/empty
+
 .DS_Store

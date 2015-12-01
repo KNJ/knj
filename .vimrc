@@ -69,6 +69,15 @@ augroup source_vimrc
   autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
 
+" persistent undo
+if has('persistent_undo')
+    set undodir=~/.vim/history
+        set undofile
+endif
+
+" save cursor position 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""
+
 " vim-indent-guides
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
