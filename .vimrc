@@ -22,9 +22,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'sudo.vim'
 
 " You can specify revision/branch/tag.
@@ -61,6 +61,15 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 colorscheme molokai
 syntax on
 highlight LineNr ctermfg=43
+
+" Key map
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-h> <BS>
+inoremap <C-d> <Del>
 
 " Auto reload .vimrc
 augroup source_vimrc
