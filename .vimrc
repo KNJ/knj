@@ -70,7 +70,6 @@ inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
-noremap <C-[> :NERDTreeToggle<CR>
 
 " Auto reload .vimrc
 augroup source_vimrc
