@@ -24,4 +24,14 @@ $ git pull
 
 ### Start Vim
 
-Start Vim and it will install plugins automatically.
+Open `~/.bashrc` via Vim and it will install plugins automatically.
+
+```shell
+$ vim ~/.bashrc
+```
+
+Then add following line.
+
+```bash
+. ~/.bash/startup.sh
+```
