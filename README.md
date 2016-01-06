@@ -18,8 +18,8 @@ Generate SSH key pair and register the public key on GitHub.
 $ cd ~
 $ git init
 $ git remote add origin git@github.com:KNJ/knj.git
+$ git pull origin master
 $ git branch --set-upstream-to=origin/master master
-$ git pull
 ```
 
 ### Start Vim
