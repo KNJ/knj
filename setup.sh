@@ -1,5 +1,18 @@
 sudo yum update -y
-sudo yum install -y gcc openssl-devel zlib-devel readline-devel
+
+sudo cp ~/templates/nginx.repo /etc/yum.repos.d/
+
+sudo yum install -y vim nginx mariadb mariadb-devel
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel
+
+echo ". ~/.bash/startup.sh" >> ~/.bashrc
+. ~/.bash/startup.sh
+
+# NeoBundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh && sh ./install.sh && rm ./install.sh
 
 # Git
 git config --global user.name "KNJ"
