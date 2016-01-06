@@ -4,10 +4,12 @@
 !.bash
 !.vimrc
 !.vim
+!setup.sh
 !README.md
 
 .vim/bundle
 .vim/history/*
 !.vim/history/empty
 
+.netrwhist
 .DS_Store
