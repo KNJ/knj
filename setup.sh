@@ -1,7 +1,7 @@
 sudo yum update -y
 
 sudo cp ~/templates/nginx.repo /etc/yum.repos.d/
-sudo cp ~/templates/MariaDB.repo /etc/yum/repos.d/
+sudo cp ~/templates/MariaDB.repo /etc/yum.repos.d/
 
 sudo yum install -y vim nginx MariaDB-server MariaDB-client
 sudo systemctl start nginx
