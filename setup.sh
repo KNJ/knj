@@ -1,13 +1,13 @@
 sudo yum update -y
 
 sudo cp ~/templates/nginx.repo /etc/yum.repos.d/
-sudo cp ~/templates/Mariadb.repo /etc/yum/repos.d/
+sudo cp ~/templates/MariaDB.repo /etc/yum/repos.d/
 
 sudo yum install -y vim nginx MariaDB-server MariaDB-client
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel
+sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel epel-release
 
 echo ". ~/.bash/startup.sh" >> ~/.bashrc
 . ~/.bash/startup.sh
@@ -32,8 +32,9 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 
 # PHP
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-sudo yum install -y --enable-repo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-pecl-yaml
-sudo systemctl start php-fpmsudo systemctl enable php-fpm
+sudo yum install -y --enablerepo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-pecl-yaml php-fpm
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
 
 # Composer
 curl -sS https://getcomposer.org/installer | php
