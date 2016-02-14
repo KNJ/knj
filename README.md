@@ -8,30 +8,34 @@ _To me:_
 
 Generate SSH key pair and register the public key on GitHub.
 
-### Install NeoBundle
+### Install Git and Vim
 
-[Shougo/neobundle.vim](https://github.com/Shougo/neobundle.vim)
+```sh
+$ sudo yum install git vim
+```
 
 ### Clone Repository
 
-```shell
+```sh
 $ cd ~
 $ git init
 $ git remote add origin git@github.com:KNJ/knj.git
-$ git pull origin master
+$ git fetch origin
 $ git branch --set-upstream-to=origin/master master
+```
+
+### Setup
+
+```sh
+$ . setup.sh
 ```
 
 ### Start Vim
 
-Open `~/.bashrc` via Vim and it will install plugins automatically.
+Starting Vim, the plugins are to be installed.
 
-```shell
-$ vim ~/.bashrc
+```sh
+$ vim
 ```
 
-Then add following line.
-
-```bash
-. ~/.bash/startup.sh
-```
+But it is likely that the installation will fail. In that case, execute `:NeoBundleCheck` command.
