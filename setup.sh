@@ -3,11 +3,11 @@ sudo yum update -y
 sudo cp ~/templates/nginx.repo /etc/yum.repos.d/
 sudo cp ~/templates/MariaDB.repo /etc/yum.repos.d/
 
-sudo yum install -y vim nginx MariaDB-server MariaDB-client
+sudo yum install -y vim nginx MariaDB-server MariaDB-client MariaDB-devel
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel epel-release
+sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel sqlite-devel epel-release
 
 echo ". ~/.bash/startup.sh" >> ~/.bashrc
 . ~/.bash/startup.sh
@@ -41,3 +41,7 @@ curl -sS https://getcomposer.org/installer | php
 
 source ~/.bash_profile
 cd
+
+echo '==================== Ruby versions ===================='
+rbenv install --list | grep -E '^ *[0-9]+\.[0-9]+\.[0-9]+'
+echo '======================================================='
