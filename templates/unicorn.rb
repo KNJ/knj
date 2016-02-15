@@ -3,9 +3,9 @@ application = 'example.com'
 worker_processes 2
 working_directory "/var/www/#{application}"
 
-listen "/var/run/unicorn/unicorn_#{application}.sock"
+listen "/var/run/unicorn/#{application}.sock"
 
-pid "/var/run/unicorn/unicorn_#{application}.pid"
+pid "/var/run/unicorn/#{application}.pid"
 
 timeout 60
 
