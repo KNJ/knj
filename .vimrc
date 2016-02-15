@@ -47,8 +47,8 @@ set number
 set ruler
 set expandtab
 set laststatus=2
-set ts=4
-set shiftwidth=4
+set ts=2
+set shiftwidth=2
 set autoindent
 set smartindent
 set smarttab
@@ -84,7 +84,7 @@ if has('persistent_undo')
     set undofile
 endif
 
-" save cursor position 
+" save cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""
 
 " vim-indent-guides
