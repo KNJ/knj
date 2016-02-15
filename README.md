@@ -21,6 +21,7 @@ $ cd ~
 $ git init
 $ git remote add origin git@github.com:KNJ/knj.git
 $ git fetch origin
+$ git merge origin/master
 $ git branch --set-upstream-to=origin/master master
 ```
 
