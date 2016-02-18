@@ -6,6 +6,8 @@ sudo cp ~/templates/MariaDB.repo /etc/yum.repos.d/
 sudo yum install -y vim nginx MariaDB-server MariaDB-client MariaDB-devel
 sudo systemctl start nginx
 sudo systemctl enable nginx
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
 
 sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel sqlite-devel epel-release
 
@@ -44,4 +46,8 @@ cd
 
 echo '==================== Ruby versions ===================='
 rbenv install --list | grep -E '^ *[0-9]+\.[0-9]+\.[0-9]+'
+echo '======================================================='
+
+echo '==================== Node versions ===================='
+nvm ls-remote | grep -E '^ *v[4-9]+\.[0-9]+\.[0-9]+$'
 echo '======================================================='
