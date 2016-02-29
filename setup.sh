@@ -9,7 +9,7 @@ sudo systemctl enable nginx
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
-sudo yum install -y bzip2 gcc openssl-devel zlib-devel readline-devel sqlite-devel epel-release
+sudo yum install -y bzip2 zip unzip gcc openssl-devel zlib-devel readline-devel sqlite-devel epel-release
 
 echo ". ~/.bash/startup.sh" >> ~/.bashrc
 . ~/.bash/startup.sh
