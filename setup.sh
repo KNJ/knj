@@ -34,7 +34,7 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 
 # PHP
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-sudo yum install -y --enablerepo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-pecl-yaml php-fpm
+sudo yum install -y --enablerepo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-pecl-yaml php-xml php-fpm
 sudo systemctl start php-fpm
 sudo systemctl enable php-fpm
 
