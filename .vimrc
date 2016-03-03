@@ -70,6 +70,7 @@ inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
+inoremap <silent> jj <ESC>
 
 " Auto reload .vimrc
 augroup source_vimrc
