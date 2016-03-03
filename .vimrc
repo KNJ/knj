@@ -81,8 +81,8 @@ augroup END
 
 " persistent undo
 if has('persistent_undo')
-    set undodir=~/.vim/history
-    set undofile
+  set undodir=~/.vim/history
+  set undofile
 endif
 
 " save cursor position
