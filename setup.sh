@@ -23,6 +23,7 @@ git config --global user.email "knj@wazly.net"
 git config --global color.ui true
 git config --global grep.lineNumber true
 git config --global alias.find 'grep -H --heading --break'
+git config --global core.editor 'vi -u NONE -N'
 
 # rbenv
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
