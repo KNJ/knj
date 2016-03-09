@@ -25,6 +25,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'sudo.vim'
 
 " You can specify revision/branch/tag.
