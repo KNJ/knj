@@ -65,7 +65,7 @@ syntax on
 highlight LineNr ctermfg=43
 
 " Key map
-
+noremap <C-k> :NERDTreeToggle<CR>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-p> <Up>
@@ -99,9 +99,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 " nerdtree
 augroup nerdtree
   autocmd!
-  autocmd vimenter * NERDTree
-  autocmd vimenter * wincmd w
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup END
 
 " fugitive
