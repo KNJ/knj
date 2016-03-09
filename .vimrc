@@ -59,6 +59,7 @@ set showcmd
 set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set splitright
 colorscheme molokai
 syntax on
 highlight LineNr ctermfg=43
@@ -95,6 +96,17 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_enable_on_vim_startup = 1
 
+" nerdtree
+augroup nerdtree
+  autocmd!
+  autocmd vimenter * NERDTree
+  autocmd vimenter * wincmd w
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
 " fugitive
 autocmd QuickFixCmdPost *grep* cwindow
 set statusline+=%{fugitive#statusline()}
+
+" vim-quickrun
+let g:quickrun_config = {'_': {'hook/time/enable': '1'},}
