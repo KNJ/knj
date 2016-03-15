@@ -34,6 +34,7 @@ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/r
 
 # NVM
 git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+cd -
 
 # PHP
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
@@ -42,10 +43,11 @@ sudo systemctl start php-fpm
 sudo systemctl enable php-fpm
 
 # Composer
-curl -sS https://getcomposer.org/installer | php
-
-source ~/.bash_profile
 cd
+curl -sS https://getcomposer.org/installer | php
+source ~/.bash_profile
+composer global require hirak/prestissimo
+cd -
 
 echo '==================== Ruby versions ===================='
 rbenv install --list | grep -E '^ *[0-9]+\.[0-9]+\.[0-9]+'
