@@ -38,7 +38,7 @@ cd -
 
 # PHP
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-sudo yum install -y --enablerepo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-opcache php-pecl-memcached php-pecl-yaml php-pecl-zip php-xml php-fpm
+sudo yum install -y --enablerepo=remi-php70 php php-devel php-mysql php-gd php-mbstring php-intl php-process php-opcache php-pecl-memcached php-pecl-yaml php-pecl-zip php-xml php-fpm
 sudo systemctl start php-fpm
 sudo systemctl enable php-fpm
 
