@@ -1,0 +1,8 @@
+[web]
+192.168.0.0.1
+
+[all:vars]
+env=development
+remote_user=centos
+name=KNJ
+email=knj@wazly.net

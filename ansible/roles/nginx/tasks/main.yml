@@ -1,0 +1,12 @@
+- name: add nginx repository
+  yum_repository:
+    name: nginx
+    baseurl: http://nginx.org/packages/mainline/centos/7/$basearch/
+    description: nginx repo
+    enabled: yes
+- name: ensure nginx is at the latest version
+  yum: name=nginx state=latest
+- name: enable nginx
+  service: name=nginx enabled=yes
+- name: restart nginx
+  service: name=nginx state=restarted

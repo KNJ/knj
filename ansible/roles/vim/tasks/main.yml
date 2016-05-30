@@ -1,0 +1,14 @@
+- name: download neobundle
+  get_url:
+    url: https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh
+    dest: ~/
+- name: change mode
+  file:
+    path: ~/install.sh
+    mode: a+x
+- name: execute neobundle installer
+  shell: ~/install.sh
+- name: remove neobundle installer
+  file:
+    path: ~/install.sh
+    state: absent

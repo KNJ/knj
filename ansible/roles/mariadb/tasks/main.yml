@@ -1,0 +1,17 @@
+- name: add mariadb repository
+  yum_repository:
+    name: MariaDB
+    baseurl: http://yum.mariadb.org/10.1/centos7-amd64
+    description: MariaDB 10.1
+    gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+    gpgcheck: yes
+    enabled: yes
+- name: ensure mariadb server is at the latest version
+  yum: name=MariaDB-server state=latest enablerepo=MariaDB
+  when: env == "development"
+- name: ensure mariadb client is at the latest version
+  yum: name=MariaDB-client state=latest enablerepo=MariaDB
+- name: enable mariadb
+  service: name=mariadb enabled=yes
+- name: restart mariadb
+  service: name=mariadb state=restarted

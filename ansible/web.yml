@@ -1,0 +1,34 @@
+- hosts: web
+  become: yes
+  roles:
+    - init
+  tags:
+    - init
+- hosts: web
+  roles:
+    - git
+  tags:
+    - git
+- hosts: web
+  roles:
+    - vim
+  tags:
+    - vim
+- hosts: web
+  become: yes
+  roles:
+    - nginx
+  tags:
+    - nginx
+- hosts: web
+  become: yes
+  roles:
+    - mariadb
+  tags:
+    - mariadb
+- hosts: web
+  become: yes
+  roles:
+    - php
+  tags:
+    - php

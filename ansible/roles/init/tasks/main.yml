@@ -1,0 +1,16 @@
+- name: install vim
+  yum: name=vim
+- name: install git
+  yum: name=git
+- yum: name=bzip2
+- yum: name=unzip
+- yum: name=gcc
+- yum: name=memcached
+- yum: name=openssl-devel
+- yum: name=zlib-devel
+- yum: name=readline-devel
+- yum: name=sqlite-devel
+- name: install epel
+  yum: name=epel-release
+- name: install redis
+  yum: name=redis
