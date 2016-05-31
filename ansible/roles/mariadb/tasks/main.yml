@@ -11,6 +11,8 @@
   when: env == "development"
 - name: ensure mariadb client is at the latest version
   yum: name=MariaDB-client state=latest enablerepo=MariaDB
+- name: ensure mariadb devel is at the latest version
+  yum: name=MariaDB-devel state=latest enablerepo=MariaDB
 - name: replace server.cnf
   become: yes
   template:
