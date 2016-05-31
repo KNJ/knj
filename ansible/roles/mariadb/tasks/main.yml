@@ -11,6 +11,16 @@
   when: env == "development"
 - name: ensure mariadb client is at the latest version
   yum: name=MariaDB-client state=latest enablerepo=MariaDB
+- name: replace server.cnf
+  become: yes
+  template:
+    src: server.cnf.j2
+    dest: /etc/my.cnf.d/server.cnf
+- name: replace mysql-clients.cnf
+  become: yes
+  template:
+    src: mysql-clients.cnf.j2
+    dest: /etc/my.cnf.d/mysql-clients.cnf
 - name: enable mariadb
   service: name=mariadb enabled=yes
 - name: restart mariadb
