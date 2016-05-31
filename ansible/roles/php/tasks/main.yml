@@ -1,0 +1,31 @@
+- yum:
+    name: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+- name: install php
+  yum: pkg={{ item }} state=latest enablerepo=remi-php70
+  with_items:
+    - php
+    - php-devel
+    - php-gd
+    - php-intl
+    - php-mysql
+    - php-mbstring
+    - php-opcache
+    - php-process
+    - php-xml
+    - php-pecl-memcached
+    - php-pecl-yaml
+    - php-pecl-zip
+    - php-fpm
+- name: configure php-fpm
+  become: yes
+  replace:
+    dest: /etc/php-fpm.d/www.conf
+    regexp: '^(user|group) ?= ?(apache)$'
+    replace: '\1 = nginx'
+    backup: yes
+- name: enable php-fpm
+  become: yes
+  service: name=php-fpm enabled=yes
+- name: restart php-fpm
+  become: yes
+  service: name=php-fpm state=restarted
