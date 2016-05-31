@@ -1,0 +1,12 @@
+- name: create ssh key pair
+  expect:
+    command: ssh-keygen -t rsa -v
+    echo: yes
+    responses:
+      file: ''
+      Overwrite: 'y'
+      passphrase: ''
+- name: change mode
+  file:
+    path: ~/.ssh/id_rsa.pub
+    mode: 0600

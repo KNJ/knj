@@ -6,6 +6,11 @@
     - init
 - hosts: web
   roles:
+    - ssh
+  tags:
+    - ssh
+- hosts: web
+  roles:
     - git
   tags:
     - git
@@ -37,3 +42,8 @@
     - nvm
   tags:
     - nvm
+- hosts: web
+  roles:
+    - rbenv
+  tags:
+    - rbenv

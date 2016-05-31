@@ -14,3 +14,15 @@
   yum: name=epel-release
 - name: install redis
   yum: name=redis
+- name: download get-pip.py
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: ~/
+- name: install pip
+  shell: python ~/get-pip.py
+- name: remove get-pip.py
+  file:
+    path: ~/get-pip.py
+    state: absent
+- name: install pexpect
+  pip: name=pexpect
