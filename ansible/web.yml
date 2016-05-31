@@ -32,3 +32,8 @@
     - php
   tags:
     - php
+- hosts: web
+  roles:
+    - nvm
+  tags:
+    - nvm

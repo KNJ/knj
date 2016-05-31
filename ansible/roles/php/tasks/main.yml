@@ -29,3 +29,11 @@
 - name: restart php-fpm
   become: yes
   service: name=php-fpm state=restarted
+- name: download composer
+  become: no
+  shell: curl -sS https://getcomposer.org/installer | php
+  args:
+    chdir: ~/
+- name: install hirak/prestissimo
+  become: no
+  shell: php ~/composer.phar global require hirak/prestissimo

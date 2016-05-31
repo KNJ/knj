@@ -6,3 +6,5 @@ env=development
 remote_user=centos
 name=KNJ
 email=knj@wazly.net
+node_version=6.2.0
+ruby_version=2.3.0
