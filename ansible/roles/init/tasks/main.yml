@@ -2,8 +2,6 @@
   yum: name=vim
 - name: install git
   yum: name=git
-- name: install jq
-  yum: name=jq
 - yum: name=bzip2
 - yum: name=unzip
 - yum: name=gcc
@@ -14,6 +12,8 @@
 - yum: name=sqlite-devel
 - name: install epel
   yum: name=epel-release
+- name: install jq
+  yum: name=jq
 - name: install redis
   yum: name=redis
 - name: download get-pip.py
@@ -28,3 +28,5 @@
     state: absent
 - name: install pexpect
   pip: name=pexpect
+- name: install awscli
+  pip: name=awscli
