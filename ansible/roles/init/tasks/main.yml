@@ -2,6 +2,8 @@
   yum: name=vim
 - name: install git
   yum: name=git
+- name: install jq
+  yum: name=jq
 - yum: name=bzip2
 - yum: name=unzip
 - yum: name=gcc
