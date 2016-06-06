@@ -3,6 +3,7 @@
     name: nginx
     baseurl: http://nginx.org/packages/mainline/centos/7/$basearch/
     description: nginx repo
+    gpgcheck: no
     enabled: yes
 - name: ensure nginx is at the latest version
   yum: name=nginx state=latest
